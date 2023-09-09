@@ -33,7 +33,7 @@ namespace Emerald {
       float dt = Time.deltaTime;
 
       HandleInteractInput();
-      // HandleMoveInput(dt);
+      HandleMoveInput(dt);
       HandleLookInput();
     }
 
@@ -75,24 +75,9 @@ namespace Emerald {
 
     void HandleMoveInput(float dt) {
       var moveInput = Globals.Input.Move;
-
-      if (moveInput.magnitude < 0.1f) {
-        UpdateCharacterControllerVelocity(dt, Vector3.zero);
-      }
-      else {
-        var localRotation = transform.localRotation;
-        var moveInputQuaternion = Quaternion.LookRotation(new Vector3(moveInput.x, 0f, moveInput.y), Vector3.up);
-        var newRotation = Quaternion.RotateTowards(localRotation, moveInputQuaternion, _rotateSpeed * dt);
-        transform.localRotation = newRotation;
-
-        if (Quaternion.Angle(newRotation, moveInputQuaternion) < 0.5f) {
-          var targetVelocity = newRotation * Vector3.forward * _moveSpeed;
-          UpdateCharacterControllerVelocity(dt, targetVelocity);
-        }
-        else {
-          UpdateCharacterControllerVelocity(dt, Vector3.zero);
-        }
-      }
+      var moveInput3 = new Vector3(moveInput.x, 0f, moveInput.y);
+      var moveRotation = Quaternion.Euler(0f, transform.localEulerAngles.y, 0f);
+      UpdateCharacterControllerVelocity(dt, moveRotation * moveInput3 * _moveSpeed);
     }
 
     void HandleLookInput() {
