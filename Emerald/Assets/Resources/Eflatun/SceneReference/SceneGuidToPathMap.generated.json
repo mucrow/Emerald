@@ -1,3 +1,8 @@
 {
-  "9fc0d4010bbf28b4594072e72b8655ab": "Assets/Scenes/Gameplay.unity"
+  "9fc0d4010bbf28b4594072e72b8655ab": "Assets/Scenes/Gameplay.unity",
+  "38da56a96e1d994409b10a07b69216ca": "Packages/com.unity.render-pipelines.high-definition/Editor/SceneTemplates/Indoors/IndoorsScene.unity",
+  "26860cd8ce4951c4ea4d61360a263b9d": "Packages/com.unity.render-pipelines.high-definition/Editor/SceneTemplates/IndoorsDXR/IndoorsDXRScene.unity",
+  "bc2817664c1c44945b5f5b9bf37b95b1": "Packages/com.unity.render-pipelines.high-definition/Editor/SceneTemplates/Outdoors/OutdoorsScene.unity",
+  "75ce28beeaa3b124a9aa3e7c3e5e12bd": "Packages/com.unity.render-pipelines.high-definition/Editor/SceneTemplates/OutdoorsDXR/OutdoorsDXRScene.unity",
+  "bc1c925540049e144a5e70caf2872a25": "Packages/com.unity.render-pipelines.high-definition/Tests/Runtime/Scenes/0010_Volumes.unity"
 }

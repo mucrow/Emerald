@@ -1,5 +1,8 @@
 Tiziana Musumeci
 https://tiziana.artstation.com/
+- BeigeTileFloor.png
 - Brick.jpg
 - BrickFloor.jpg
+- CobbledGrayBrick.jpg
+- CobbledSalmonBrick.jpg
 - ColoredBrickFloor.jpg
